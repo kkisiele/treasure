@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.kkisiele.treasure
+---
+testFramework: spock
+sourceLanguage: groovy
