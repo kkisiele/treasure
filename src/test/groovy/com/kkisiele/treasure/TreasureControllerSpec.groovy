@@ -16,7 +16,7 @@ class TreasureControllerSpec extends Specification {
 
     def "Should return response with found treasure"() {
         when:
-        HuntResult result = makeRequest("11")
+        def result = makeRequest("11")
 
         then:
         result.status == 'FOUND TREASURE'
@@ -25,7 +25,7 @@ class TreasureControllerSpec extends Specification {
 
     def "Should return response with not found treasure"() {
         when:
-        HuntResult result = makeRequest("41")
+        def result = makeRequest("41")
 
         then:
         result.status == 'NO TREASURE'
@@ -33,7 +33,7 @@ class TreasureControllerSpec extends Specification {
 
     def "Should return response with error"() {
         when:
-        HuntResult result = makeRequest("WRONG")
+        def result = makeRequest("WRONG")
 
         then:
         result.status.startsWith('ERROR')
