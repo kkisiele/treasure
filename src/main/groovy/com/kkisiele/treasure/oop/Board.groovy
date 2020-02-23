@@ -3,13 +3,10 @@ package com.kkisiele.treasure.oop
 import groovy.transform.CompileStatic
 import groovy.transform.PackageScope
 
-import java.util.function.Predicate
-
 @PackageScope
 @CompileStatic
 class Board {
     private final Map<BoardLocation, Clue> clues
-    private final Predicate<Board> treasureFoundStrategy = new TreasureFoundStrategy()
     private final List<BoardLocation> visitedLocations = new ArrayList<>()
     private BoardLocation currentLocation
 
@@ -34,8 +31,8 @@ class Board {
         return clue(currentLocation).toLocation()
     }
 
-    boolean hasTreasure() {
-        return treasureFoundStrategy.test(this)
+    boolean treasureFound() {
+        return clue(currentLocation).toLocation() == currentLocation
     }
 
     List<BoardLocation> visitedLocations() {
@@ -44,12 +41,5 @@ class Board {
 
     int numberOfClues() {
         return clues.size()
-    }
-
-    private static class TreasureFoundStrategy implements Predicate<Board> {
-        @Override
-        boolean test(Board board) {
-            return board.clue(board.currentLocation).toLocation() == board.currentLocation
-        }
     }
 }

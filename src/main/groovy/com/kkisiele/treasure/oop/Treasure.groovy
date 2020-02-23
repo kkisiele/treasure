@@ -20,7 +20,7 @@ class Treasure {
         BoardLocation location = startingClue.toLocation()
         while (!board.visited(location)) {
             board.visit(location)
-            if (board.hasTreasure()) {
+            if (board.treasureFound()) {
                 return board.visitedLocations()
             }
             location = board.nextLocation()

@@ -2,7 +2,7 @@
 The goal of the program is to explore the given table for treasure. The values in the table are clues with values between 11 and 55 (the ten’s digit represents the row and the unit’s digit represents the column). Starting with the given clue, search through the table until the treasure is found (or not found). The treasure is a cell whose value is the same as its coordinates.
 
 The project features two different approaches to solve the same task.
-The object-oriented way uses domain model, small classes fulfilling SRP and some design patterns (Repository, Value Object, Strategy).
+The object-oriented way uses domain model, small classes fulfilling SRP and some patterns (Repository, Value Object).
 The functional way uses pure functions with the functions as first-class citizens, recursion, native data structures and Groovy functional language support.
 
 The project is based on the [Micronaut](https://micronaut.io) framework for handling the REST requests and bean management (dependency injection).
