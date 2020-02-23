@@ -22,26 +22,4 @@ class TreasureController {
             return HuntResult.error(ex.getMessage())
         }
     }
-
-    private static class HuntResult {
-        final String status
-        final List<String> visitedCells
-
-        static HuntResult found(List<String> visitedCells) {
-            return new HuntResult("FOUND TREASURE", visitedCells)
-        }
-
-        static HuntResult notFound() {
-            return new HuntResult("NO TREASURE")
-        }
-
-        static HuntResult error(String message) {
-            return new HuntResult("ERROR - ${message}")
-        }
-
-        private HuntResult(String status, List<String> visitedCells = []) {
-            this.status = status
-            this.visitedCells = visitedCells
-        }
-    }
 }
