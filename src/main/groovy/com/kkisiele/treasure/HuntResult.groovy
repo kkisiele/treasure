@@ -17,12 +17,6 @@ class HuntResult {
     }
 
     private static HuntResult create(String status, List<String> visitedCells = []) {
-        def huntResult = new HuntResult()
-        huntResult.status = status
-        huntResult.visitedCells = visitedCells
-        return huntResult
-    }
-
-    HuntResult() {
+        return new HuntResult(status: status, visitedCells: visitedCells)
     }
 }
