@@ -4,11 +4,12 @@ import spock.lang.Specification
 
 class ClueValidatorTest extends Specification {
     def "Should validate provided clue"() {
-        given:
         when:
         def res = ClueValidator.isValid(clue)
+
         then:
         res == isValid
+
         where:
         clue  | isValid
         "11"  | true
