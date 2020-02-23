@@ -1,8 +1,10 @@
 package com.kkisiele.treasure.oop
 
+import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
 @EqualsAndHashCode
+@CompileStatic
 final class Clue {
     final int value
 

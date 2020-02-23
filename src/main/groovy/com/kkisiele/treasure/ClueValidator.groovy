@@ -1,5 +1,8 @@
 package com.kkisiele.treasure
 
+import groovy.transform.CompileStatic
+
+@CompileStatic
 class ClueValidator {
     static void validate(String clue) {
         if (!isValid(clue)) {

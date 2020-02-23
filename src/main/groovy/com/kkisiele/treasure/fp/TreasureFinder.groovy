@@ -1,5 +1,8 @@
 package com.kkisiele.treasure.fp
 
+import groovy.transform.CompileStatic
+
+@CompileStatic
 class TreasureFinder {
     private static final int NUMBER_OF_CELLS_PER_ROW = 5
 
@@ -15,7 +18,7 @@ class TreasureFinder {
         List<String> cells = file
                 .readLines()
                 .collect { splitLine(it) }
-                .flatten()
+                .flatten() as List<String>
         return find(cells, startingClue, [])
                 .collect { formatCell(it) }
     }

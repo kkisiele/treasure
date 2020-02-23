@@ -1,8 +1,10 @@
 package com.kkisiele.treasure.oop
 
+import groovy.transform.CompileStatic
 import groovy.transform.PackageScope
 
 @PackageScope
+@CompileStatic
 class TextFileBoardRepository implements BoardRepository {
     private final File file
 

@@ -1,5 +1,8 @@
 package com.kkisiele.treasure.oop
 
+import groovy.transform.CompileStatic
+
+@CompileStatic
 class Treasure {
     private final BoardRepository boardRepository
 

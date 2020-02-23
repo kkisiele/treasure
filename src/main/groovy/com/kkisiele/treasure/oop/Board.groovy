@@ -1,10 +1,12 @@
 package com.kkisiele.treasure.oop
 
+import groovy.transform.CompileStatic
 import groovy.transform.PackageScope
 
 import java.util.function.Predicate
 
 @PackageScope
+@CompileStatic
 class Board {
     private final Map<BoardLocation, Clue> clues
     private final Predicate<Board> treasureFoundStrategy = new TreasureFoundStrategy()
@@ -12,7 +14,7 @@ class Board {
     private BoardLocation currentLocation
 
     Board(Map<BoardLocation, Clue> clues) {
-        this.clues = clues.clone()
+        this.clues = new HashMap<>(clues)
     }
 
     Clue clue(BoardLocation location) {

@@ -3,10 +3,12 @@ package com.kkisiele.treasure
 import com.kkisiele.treasure.fp.TreasureFinder
 import com.kkisiele.treasure.oop.Clue
 import com.kkisiele.treasure.oop.Treasure
+import groovy.transform.CompileStatic
 
 import javax.inject.Singleton
 
 @Singleton
+@CompileStatic
 class TreasureFacade {
     private final File file = new File(getClass().getResource("/sample_input.txt").file)
 

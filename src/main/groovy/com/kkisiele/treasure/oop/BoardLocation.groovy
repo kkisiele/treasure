@@ -1,8 +1,10 @@
 package com.kkisiele.treasure.oop
 
+import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
 @EqualsAndHashCode
+@CompileStatic
 final class BoardLocation {
     final int row
     final int column
